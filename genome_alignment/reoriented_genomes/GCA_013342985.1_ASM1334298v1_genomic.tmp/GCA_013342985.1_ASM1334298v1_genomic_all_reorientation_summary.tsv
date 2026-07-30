@@ -1,0 +1,2 @@
+Contig	Gene_Reoriented	Start	Strand	Top_Hit	Top_Hit_Length	Covered_Length	Coverage	Identical_AAs	Identity_Percentage	Overlapping_Contig_End
+GCA_013342985.1_ASM1334298v1	dnaA	994452	forward	sp~A0KEC3~DNAA_AERHH	456	453	99.34	182	40.18	False
