@@ -1,4 +1,4 @@
-Collection of commands and scripts used in the analysis of genome de-erosion in the vesicomyid-clade of sulfur-oxidizing symbionts.
+Collection of commands and scripts used in the analysis of genome de-erosion in the vesicomyid-clade of sulfur-oxidizing symbionts. Currently available as a preprint on bioRxiv.
 
 ## Citation
 
