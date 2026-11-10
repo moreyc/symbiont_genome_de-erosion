@@ -1,0 +1,10 @@
+##gff-version 3
+CP054877.1	Prodigal:002006	CDS	17379	17495	.	+	0	ID=GCA_014706615.1_ASM1470661v1_00016;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_014706615.1_ASM1470661v1_00016;product=hypothetical protein
+CP054877.1	Prodigal:002006	CDS	66517	66648	.	-	0	ID=GCA_014706615.1_ASM1470661v1_00069;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_014706615.1_ASM1470661v1_00069;product=hypothetical protein
+CP054877.1	Prodigal:002006	CDS	576444	576605	.	-	0	ID=GCA_014706615.1_ASM1470661v1_00554;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_014706615.1_ASM1470661v1_00554;product=hypothetical protein
+CP054877.1	Prodigal:002006	CDS	589956	590099	.	-	0	ID=GCA_014706615.1_ASM1470661v1_00566;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_014706615.1_ASM1470661v1_00566;product=hypothetical protein
+CP054877.1	Prodigal:002006	CDS	634814	634957	.	-	0	ID=GCA_014706615.1_ASM1470661v1_00618;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_014706615.1_ASM1470661v1_00618;product=hypothetical protein
+CP054877.1	Prodigal:002006	CDS	700681	700860	.	-	0	ID=GCA_014706615.1_ASM1470661v1_00677;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_014706615.1_ASM1470661v1_00677;product=hypothetical protein
+CP054877.1	Prodigal:002006	CDS	706816	706980	.	-	0	ID=GCA_014706615.1_ASM1470661v1_00687;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_014706615.1_ASM1470661v1_00687;product=hypothetical protein
+CP054877.1	Prodigal:002006	CDS	739233	739334	.	-	0	ID=GCA_014706615.1_ASM1470661v1_00720;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_014706615.1_ASM1470661v1_00720;product=hypothetical protein
+CP054877.1	Prodigal:002006	CDS	739315	739479	.	-	0	ID=GCA_014706615.1_ASM1470661v1_00721;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_014706615.1_ASM1470661v1_00721;product=hypothetical protein

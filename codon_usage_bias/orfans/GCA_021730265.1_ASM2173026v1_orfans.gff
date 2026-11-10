@@ -1,0 +1,2 @@
+##gff-version 3
+CP072530.1	Prodigal:002006	CDS	647372	647581	.	+	0	ID=GCA_021730265.1_ASM2173026v1_00657;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_021730265.1_ASM2173026v1_00657;product=hypothetical protein

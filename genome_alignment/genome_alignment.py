@@ -5,43 +5,49 @@ import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 import sys
 
+plt.rcParams['font.family'] = 'Arial'
+plt.rcParams['mathtext.fontset'] = 'custom'
+plt.rcParams['mathtext.rm'] = 'Arial'
+plt.rcParams['mathtext.it'] = 'Arial:italic'
+plt.rcParams['mathtext.bf'] = 'Arial:bold'
+
 GENOMES = {
-	'GCA_000015105.1': 'genomes/GCA_000015105.1_ASM1510v1_genomic.fasta',
-	'GCA_030142985.1': 'genomes/GCA_030142985.1_ASM3014298v1_genomic.fasta',
-	'GCA_021730105.1': 'genomes/GCA_021730105.1_ASM2173010v1_genomic.fasta',
-	'GCA_016592615.1': 'genomes/GCA_016592615.1_ASM1659261v1_genomic.fasta',
-	'GCA_016592595.1': 'genomes/GCA_016592595.1_ASM1659259v1_genomic.fasta',
-	'GCA_021730205.1': 'genomes/GCA_021730205.1_ASM2173020v1_genomic.fasta',
-	'GCA_021730185.1': 'genomes/GCA_021730185.1_ASM2173018v1_genomic.fasta',
-	'GCA_013342985.1': 'genomes/GCA_013342985.1_ASM1334298v1_genomic.fasta',
-	'GCA_021730225': 'genomes/GCA_021730225.1_ASM2173022v1_genomic.fasta',
-	'GCA_021730245': 'genomes/GCA_021730245.1_ASM2173024v1_genomic.fasta',
-	'GCA_000010405': 'genomes/GCA_000010405.1_ASM1040v1_genomic.fasta',
-	'GCA_021730145': 'genomes/GCA_021730145.1_ASM2173014v1_genomic.fasta',
-	'GCA_021730125': 'genomes/GCA_021730125.1_ASM2173012v1_genomic.fasta',
-	'GCA_014706615': 'genomes/GCA_014706615.1_ASM1470661v1_genomic.fasta',
-	'GCA_021730165': 'genomes/GCA_021730165.1_ASM2173016v1_genomic.fasta',
-	'GCA_021730265': 'genomes/GCA_021730265.1_ASM2173026v1_genomic.fasta',
+	'GCA_000015105.1': '../genomes/GCA_000015105.1_ASM1510v1.fna',
+	'GCA_030142985.1': '../genomes/GCA_030142985.1_ASM3014298v1.fna',
+	'GCA_021730105.1': '../genomes/GCA_021730105.1_ASM2173010v1.fna',
+	'GCA_016592615.1': '../genomes/GCA_016592615.1_ASM1659261v1.fna',
+	'GCA_016592595.1': '../genomes/GCA_016592595.1_ASM1659259v1.fna',
+	'GCA_021730205.1': '../genomes/GCA_021730205.1_ASM2173020v1.fna',
+	'GCA_021730185.1': '../genomes/GCA_021730185.1_ASM2173018v1.fna',
+	'GCA_013342985.1': '../genomes/GCA_013342985.1_ASM1334298v1.fna',
+	'GCA_021730225': '../genomes/GCA_021730225.1_ASM2173022v1.fna',
+	'GCA_021730245': '../genomes/GCA_021730245.1_ASM2173024v1.fna',
+	'GCA_000010405': '../genomes/GCA_000010405.1_ASM1040v1.fna',
+	'GCA_021730145': '../genomes/GCA_021730145.1_ASM2173014v1.fna',
+	'GCA_021730125': '../genomes/GCA_021730125.1_ASM2173012v1.fna',
+	'GCA_014706615': '../genomes/GCA_014706615.1_ASM1470661v1.fna',
+	'GCA_021730165': '../genomes/GCA_021730165.1_ASM2173016v1.fna',
+	'GCA_021730265': '../genomes/GCA_021730265.1_ASM2173026v1.fna',
 }
 
 
 NAMES = {
-	'GCA_000015105.1': 'Calyptogena magnifica SOB',
-	'GCA_030142985.1': 'Thyasira sp. Haima SOB',
-	'GCA_021730105.1': 'Pliocardia ponderosa SOB',
-	'GCA_016592615.1': 'Isorropodon fossajaponicum SOB',
-	'GCA_016592595.1': 'Abyssogena phaseoliformis SOB',
-	'GCA_021730205.1': 'Calyptogena pacifica SOB',
-	'GCA_021730185.1': 'Calyptogena rectimargo SOB',
-	'GCA_013342985.1': 'Calyptogena fausta SOB',
-	'GCA_021730225': 'Archivesica gigas SOB 15',
-	'GCA_021730245': 'Archivesica gigas SOB 16',
-	'GCA_000010405': 'Calyptogena okutanii SOB',
-	'GCA_021730145': 'Archivesica soyoae SOB 4',
-	'GCA_021730125': 'Archivesica soyoae SOB 5',
-	'GCA_014706615': 'Archivessica marissinica SOB',
-	'GCA_021730165': 'Archivesica extenta SOB',
-	'GCA_021730265': 'Archivesica diagonalis SOB',
+	'GCA_000015105.1': r'$\it{Calyptogena\ magnifica}$ SOB',
+	'GCA_030142985.1': r'$\it{Thyasira}$ sp. Haima SOB',
+	'GCA_021730105.1': r'$\it{Pliocardia\ ponderosa}$ SOB',
+	'GCA_016592615.1': r'$\it{Isorropodon\ fossajaponicum}$ SOB',
+	'GCA_016592595.1': r'$\it{Abyssogena\ phaseoliformis}$ SOB',
+	'GCA_021730205.1': r'$\it{Calyptogena\ pacifica}$ SOB',
+	'GCA_021730185.1': r'$\it{Calyptogena\ rectimargo}$ SOB',
+	'GCA_013342985.1': r'$\it{Calyptogena\ fausta}$ SOB',
+	'GCA_021730225': r'$\it{Archivesica\ gigas}$ SOB 15',
+	'GCA_021730245': r'$\it{Archivesica\ gigas}$ SOB 16',
+	'GCA_000010405': r'$\it{Calyptogena\ okutanii}$ SOB',
+	'GCA_021730145': r'$\it{Archivesica\ soyoae}$ SOB 4',
+	'GCA_021730125': r'$\it{Archivesica\ soyoae}$ SOB 5',
+	'GCA_014706615': r'$\it{Archivessica\ marissinica}$ SOB',
+	'GCA_021730165': r'$\it{Archivesica\ extenta}$ SOB',
+	'GCA_021730265': r'$\it{Archivesica\ diagonalis}$ SOB',
 }
 
 OUTPUT_DIR = 'mummer_output'
@@ -53,9 +59,8 @@ os.makedirs(COORDS_DIR, exist_ok=True)
 # MUMmer parameters
 MIN_CLUSTER = 65      # Minimum length of a cluster of matches
 
-# ==========================
-# REORIENT GENOMES
-# ==========================
+
+#### REORIENT GENOMES ####
 
 print("\nReorienting genomes using dnaapler...")
 
@@ -64,7 +69,7 @@ os.makedirs('reoriented_genomes', exist_ok=True)
 for i, path in GENOMES.items():
 	print(f"\nReorienting {path}...")
 
-	basename = os.path.basename(path).replace(".fasta", "")
+	basename = os.path.basename(path).replace(".fna", "")
 	tmpdir = f'reoriented_genomes/{basename}.tmp'
 	tmp_output = f'{tmpdir}/{basename}_reoriented.fasta'
 	final_output = f'reoriented_genomes/{basename}_reoriented.fasta'
@@ -85,9 +90,7 @@ for i, path in GENOMES.items():
 	os.rename(tmp_output, final_output)
 
 
-# ========================== 
-# RUN MUMMER ALIGNMENTS
-# ==========================
+#### RUN MUMMER ALIGNMENTS ####
 
 species_names = list(GENOMES.keys())
 species_names.reverse()  # Reverse to match row order
@@ -99,8 +102,8 @@ for i, ref_name in enumerate(species_names):
 		for j, qry_name in enumerate(species_names):
 			if i < j:  # skip lower triangle
 				continue
-			ref_path = GENOMES[ref_name].replace(".fasta", "_reoriented.fasta").replace("genomes/", "reoriented_genomes/")
-			qry_path = GENOMES[qry_name].replace(".fasta", "_reoriented.fasta").replace("genomes/", "reoriented_genomes/")
+			ref_path = GENOMES[ref_name].replace(".fna", "_reoriented.fasta").replace("../genomes/", "reoriented_genomes/")
+			qry_path = GENOMES[qry_name].replace(".fna", "_reoriented.fasta").replace("../genomes/", "reoriented_genomes/")
 			
 			prefix = f'{COORDS_DIR}/{i}_{j}'
 			
@@ -139,19 +142,9 @@ for i, ref_name in enumerate(species_names):
 			print(f"\tCreated {prefix}.coords")
 
 
-# ==========================
-# PARSE COORDS FILES
-# ==========================
+#### PARSE COORDS FILES ####
 
 def parse_coords_file(coords_file):
-	"""
-	Parse MUMmer show-coords output.
-	
-	Format:
-	[S1] [E1] | [S2] [E2] | [LEN 1] [LEN 2] | [% IDY] | [LEN R] [LEN Q] | [COV R] [COV Q] | [TAGS]
-	
-	Returns: list of alignment blocks with coordinates and identity
-	"""
 	alignments = []
 	
 	with open(coords_file, 'r') as f:
@@ -208,9 +201,7 @@ def calculate_alignment_stats(alignments):
 	}
 
 
-# =========================
-# VISUALIZE ALIGNMENTS (MEGADOTPLOT)
-# =========================
+#### VISUALIZE ALIGNMENTS (MEGADOTPLOT) ####
 
 n = len(species_names)
 
@@ -222,7 +213,6 @@ gs = GridSpec(n + 2, n + 1, figure=fig,
 				width_ratios=[1]*n + [0.05],
 				height_ratios=[0.05] + [1]*n + [0.08])
 
-# Store data for all cells
 all_stats = np.zeros((n, n))
 
 # Plot each cell
@@ -245,10 +235,8 @@ for i in range(n):
 			for aln in alignments:
 				# Determine if reverse complement
 				if aln['qry_start'] < aln['qry_end']:
-					# Forward alignment
 					color = plt.cm.RdYlGn(aln['identity'] / 100)
 				else:
-					# Reverse alignment
 					color = plt.cm.Blues(aln['identity'] / 100)
 				
 				ax.plot([aln['ref_start'], aln['ref_end']], 
@@ -280,14 +268,14 @@ for i in range(n):
 		# 			fontsize=7, 
 		# 			bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
 
-# Add row labels (y-axis - query genomes)
+# Add labels
+
 for i, name in enumerate(NAMES.get(species_names[i], species_names[i]) for i in range(n)):
 	ax = fig.add_subplot(gs[i + 1, 0])
 	ax.text(-0.25, 0.5, name, rotation=0, ha='right', va='center',
 			fontsize=30)
 	ax.axis('off')
 
-# Add column labels (bottom row)
 for j, name in enumerate(NAMES.get(species_names[j], species_names[j]) for j in range(n)):
 	ax = fig.add_subplot(gs[gs.nrows - 1, j])  # move to last row
 	ax.text(0.5, 0.5, name, rotation=45,
@@ -295,7 +283,6 @@ for j, name in enumerate(NAMES.get(species_names[j], species_names[j]) for j in 
 			fontsize=30)
 	ax.axis('off')
 
-# Main title
 fig.suptitle('Ruthia (clade II) Genome Synteny Matrix', 
 			fontsize=16, fontweight='bold', y=1)
 

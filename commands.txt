@@ -1,0 +1,117 @@
+
+#### Data acquisition and quality assessment ####
+
+# Run BUSCO
+mkdir busco
+cd busco
+busco -i ../vesicomyid_SOB_genomes -o busco_out -l gammaproteobacteria_odb12.2 -m genome -c 8 -f
+
+
+
+
+#### Genome annotation, gene clustering, and mobile element identification ####
+
+## Genome annotation ##
+
+mkdir -f data/faa
+mkdir -f data/ffn
+mkdir -f data/gff
+
+prokka data/$GENOME \
+	--outdir prokka/$GENOME \
+	--prefix $GENOME \
+	--locustag $GENOME \
+	--force
+cp prokka/$GENOME/$GENOME.faa data/faa
+cp prokka/$GENOME/$GENOME.ffn data/ffn
+cp prokka/$GENOME/$GENOME.gff data/gff
+
+## Gene clustering by orthogroup ##
+orthofinder -f data/faa -t 8 -a 8 -o results/{EXAMPLE}/orthofinder/
+
+## Insertion sequence prediction ##
+isescan.py \
+	--seqfile data/genomes/$GENOME.fna \
+	--output insertion_sequences/isescan/$GENOME
+
+## Prophage prediction ##
+PHASTEST was used via the {web-based tool}[https://phastest.ca/].
+
+
+## Codon usage bias ##
+
+#Calculate CAI, GC3 for each SOB genome
+for FILE in Single_Copy_Orthologue_Sequences_ffn_perspecies/*.ffn
+do
+GENOME=$(basename $FILE _sc_ogs.ffn)
+mkdir -p results/$GENOME
+python core_cai.py \
+    -g ../genome/$GENOME.ffn \
+    -r Single_Copy_Orthologue_Sequences_ffn_perspecies/${GENOME}_sc_ogs.ffn \
+    -o results/$GENOME/${GENOME}_CAI.tsv \
+	--gff gff/${GENOME}.gff
+done
+
+
+# Calculate GC, CAI across genome for each SOB genome
+python 
+for FILE in Single_Copy_Orthologue_Sequences_ffn_perspecies/*.ffn
+do
+GENOME=$(basename $FILE _sc_ogs.ffn)
+python plot_cai_genome.py \
+	-i results/$GENOME/${GENOME}_CAI.tsv \
+	--interesting-gff
+	--plot results/$GENOME/${GENOME}_cai_genome.tsv
+done
+
+# Plot CAI and ORFan genes across each SOB genome
+for FILE in Single_Copy_Orthologue_Sequences_ffn_perspecies/*.ffn
+do
+python plot_cai_genome.py \
+	-i results/$GENOME/${GENOME}_CAI.tsv \
+	--gff orfans/${GENOME}_orfans.gff
+	--interesting-gff abysso_hgt.gff \
+	--interesting-label "ORFan gene"
+done
+
+# Plot CAI vs GC3 for *Abyssogena phaseoliformis* SOB
+python plot_cai_gc3.py \
+	-i results/GCA_016592595.1_ASM1659259v1/GCA_016592595.1_ASM1659259v1_CAI.tsv \
+	--gff gff/GCA_016592595.1_ASM1659259v1.gff
+	--interesting-gff abysso_hgt.gff \
+	--interesting-label "Putative HGT region CDS"
+
+# Test whether abysso putative HGT (signed mean residuals) regions have lower CAI than expected due to chance.
+python stat_test.py \
+	results/GCA_016592595.1_ASM1659259v1/GCA_016592595.1_ASM1659259v1_CAI.tsv \
+	AP012977.1:485487-541737
+python stat_test.py \
+	/Users/camo/Documents/Symbs/aim1_manuscript/symbiont_genome_de-erosion/codon_usage_bias/results/GCA_016592595.1_ASM1659259v1/GCA_016592595.1_ASM1659259v1_CAI.tsv \
+	AP012977.1:176681-204426
+
+
+## Insertion sequence phylogenetic analysis ##
+
+
+## Phylogenetic analysis of symbiont genomes ##
+
+
+## Phylogenetic analysis of host genomes ##
+
+
+## Whole genome alignment ##
+
+
+## Pathway completeness and pseudogenization analysis ##
+
+
+## Gene gain, duplication, and loss reconstruction ##
+
+
+## Structural and functional prediction of novel adhesins ##
+
+
+## Adhesin expression analysis ##
+
+
+## Detection of recombination and repair genes ##

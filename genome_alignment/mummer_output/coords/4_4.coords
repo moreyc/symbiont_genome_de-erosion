@@ -1,8 +1,0 @@
-/Users/camo/Documents/Symbs/aim1_manuscript/genome_alignment/reoriented_genomes/GCA_021730145.1_ASM2173014v1_genomic_reoriented.fasta /Users/camo/Documents/Symbs/aim1_manuscript/genome_alignment/reoriented_genomes/GCA_021730145.1_ASM2173014v1_genomic_reoriented.fasta
-NUCMER
-
-    [S1]     [E1]  |     [S2]     [E2]  |  [LEN 1]  [LEN 2]  |  [% IDY]  |  [LEN R]  [LEN Q]  |  [COV R]  [COV Q]  | [TAGS]
-===============================================================================================================================
-       1  1017185  |        1  1017185  |  1017185  1017185  |   100.00  |  1017185  1017185  |   100.00   100.00  | GCA_021730145.1_ASM2173014v1	GCA_021730145.1_ASM2173014v1
-  177556   178751  |   784324   783129  |     1196     1196  |    98.49  |  1017185  1017185  |     0.12     0.12  | GCA_021730145.1_ASM2173014v1	GCA_021730145.1_ASM2173014v1
-  783129   784324  |   178751   177556  |     1196     1196  |    98.49  |  1017185  1017185  |     0.12     0.12  | GCA_021730145.1_ASM2173014v1	GCA_021730145.1_ASM2173014v1

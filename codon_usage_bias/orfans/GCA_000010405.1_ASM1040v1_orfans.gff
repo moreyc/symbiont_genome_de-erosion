@@ -1,0 +1,17 @@
+##gff-version 3
+AP009247.1	Prodigal:002006	CDS	44001	44201	.	-	0	ID=GCA_000010405.1_ASM1040v1_00049;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00049;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	66489	66692	.	-	0	ID=GCA_000010405.1_ASM1040v1_00072;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00072;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	66974	67141	.	-	0	ID=GCA_000010405.1_ASM1040v1_00073;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00073;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	163053	163148	.	+	0	ID=GCA_000010405.1_ASM1040v1_00156;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00156;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	307896	308018	.	-	0	ID=GCA_000010405.1_ASM1040v1_00311;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00311;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	380067	380180	.	-	0	ID=GCA_000010405.1_ASM1040v1_00377;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00377;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	385129	385230	.	+	0	ID=GCA_000010405.1_ASM1040v1_00385;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00385;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	401369	401596	.	+	0	ID=GCA_000010405.1_ASM1040v1_00402;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00402;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	403402	403590	.	+	0	ID=GCA_000010405.1_ASM1040v1_00405;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00405;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	410974	411066	.	-	0	ID=GCA_000010405.1_ASM1040v1_00414;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00414;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	432158	432274	.	+	0	ID=GCA_000010405.1_ASM1040v1_00435;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00435;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	450774	451913	.	-	0	ID=GCA_000010405.1_ASM1040v1_00447;eC_number=2.4.1.129;Name=mrdB;db_xref=COG:COG0772;gene=mrdB;inference=ab initio prediction:Prodigal:002006,similar to AA sequence:UniProtKB:P0ABG7;locus_tag=GCA_000010405.1_ASM1040v1_00447;product=Peptidoglycan glycosyltransferase MrdB
+AP009247.1	Prodigal:002006	CDS	530910	531128	.	+	0	ID=GCA_000010405.1_ASM1040v1_00521;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00521;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	564696	564833	.	-	0	ID=GCA_000010405.1_ASM1040v1_00555;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00555;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	669032	669175	.	-	0	ID=GCA_000010405.1_ASM1040v1_00666;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00666;product=hypothetical protein
+AP009247.1	Prodigal:002006	CDS	726585	726779	.	+	0	ID=GCA_000010405.1_ASM1040v1_00720;inference=ab initio prediction:Prodigal:002006;locus_tag=GCA_000010405.1_ASM1040v1_00720;product=hypothetical protein
